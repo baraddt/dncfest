@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNC Fest 2024</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Tombol untuk membuka sidebar -->
+    <!-- <button class="open-btn" id="openBtn" onclick="toggleSidebar()">☰</button> -->
+
+    <!-- <div class="sidebar" id="sidebar" onclick="closeSidebar()">
+        <a href="dashboard.html">Beranda</a>
+        <a href="user/about.php">About Event</a>
+        <a href="#">Contact Us</a>
+        <a href="user/ticket.php">Ticket</a>
+    </div> -->
+    <div class="content" id="mainContent">
+        <img src="img/LOGO_LIAC.png" alt="Logo DNC Fest"
+            style="width: 110px; height: auto; vertical-align: middle; margin-right: 10px;">
+        <h1 style="display: inline;">DNC Fest 2024</h1>
+        <div class="container">
+            <div class="image-box">
+                <img src="img/gambar-background.jpg" alt="Image">
+            </div>
+            <div class="news">
+                <h3>Latest News</h3>
+                <p>Bagi temen-temen yang belum tau apa itu DNC fest, disini kami akan menjelaskan sedikit tentang DNC fest tersebut.</p>
+                <p>DNC fest sendiri merupakan singkatan dari (Dance and Cosplay festival), tentunya di tahun ini kita mengambil tema 3 budaya sekaligus, yaitu indonesia x japan x korea</p>
+                <p>Kalian juga bisa have fun dan foto foto sama cosplayer favorite kalian di event.</p>
+                <hr><hr><br>
+                <img src="img/layout.png" alt="Another Image"><br>
+                <!-- <a href="#"><button class="btn">Buy Ticket</button></a> -->
+                <h4>Starting from 18 April 2024 at 1 p.m</h4>
+                <h3>(GMT +7 / Tasikmalaya Local Time)</h3>
+            </div>
+            <div class="terms">
+                <h3>Terms & Conditions</h3>
+                <p>1. Tiket hanya dapat dibeli melalui DNCFest2024.com. Tiket hanya untuk masuk ke acara DNC Fest 2024.
+                </p>
+                <p>2. Pembelian tiket harus menggunakan kartu identitas yang valid. Pastikan data pembelian tiket sesuai
+                    dengan data yang valid dan benar (Kartu Identitas/KK/KTP/SIM/Paspor). Tiket tidak dapat diubah
+                    setelah pembelian.</p>
+                <p>3. Dengan membeli tiket DNC Fest 2024, Anda setuju untuk pengumpulan, penyimpanan, dan penggunaan
+                    terbatas data pribadi Anda untuk keperluan acara DNC Fest 2024.</p>
+                <p>4. Penjualan tiket dibatasi maksimal 4 (empat) per transaksi. 1 (satu) alamat email dan 1 (satu)
+                    nomor telepon hanya dapat digunakan untuk 1 (satu) transaksi.</p>
+                <p>5. Nomor kursi untuk semua area duduk akan dipilih otomatis berdasarkan kursi terbaik yang tersedia
+                    dalam sistem dan akan dikirim melalui email H-7 sebelum acara.</p>
+                <p>6. Harga tiket tidak termasuk pajak pemerintah 10% dan biaya admin tiket 5%.</p>
+                <p>7. Tiket dijual langsung oleh Penyelenggara kepada konsumen. Tiket yang dibeli oleh bisnis atau
+                    pedagang yang melanggar Syarat dan Ketentuan penjualan tiket dapat menjadi tidak valid. Tiket yang
+                    dibeli dari situs web pihak ketiga dan reseller tidak sah adalah risiko dan tanggung jawab pembeli
+                    tiket.</p>
+                <p>8. Semua penjualan tiket bersifat final, tidak ada pengembalian atau penukaran.</p>
+                <p>9. Jika konser dibatalkan, tiket akan dikembalikan sesuai dengan ketentuan penyelenggara.
+                    Pengembalian tidak termasuk biaya admin tiket, biaya kenyamanan kartu kredit, atau biaya pribadi
+                    lainnya.</p>
+                <p>10. Pemegang Tiket memberikan hak kepada Penyelenggara untuk menggunakan rekaman video dan gambar
+                    diam untuk keperluan iklan, publisitas, dan promosi acara tanpa persetujuan lebih lanjut.</p>
+            </div>
+            <div class="contact">
+                <h3>CONTACT</h3>
+                <div class="contact-info">
+                    <h4>Customer Service</h4>
+                    <p>Email : <a href="mailto:liacofficial@gmail.com">liacofficial@gmail.com</a></p>
+                </div>
+                <div class="contact-info">
+                    <h4>Partnership and Sponsorship</h4>
+                    <p>Email : <a href="mailto:barad.fhx@gmail.com">barad.fhx@gmail.com</a></p>
+                </div>
+            </div>
+
+        </div><hr>
+        <hr>
+        <footer class="footer">
+            <p>&copy; 2024 DNC Fest. All rights reserved.</p>
+            <p>Follow us on <a href="https://www.instagram.com/liac.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style="color: #fff;">Instagram</a> | Like us on <a
+                    href="https://www.instagram.com/liac.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style="color: #fff;">Instagram</a></p>
+        </footer>
+
+    </div>
+    
+
+    <script>
+        // Fungsi untuk membuka sidebar
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            var content = document.getElementById("mainContent");
+            var openBtn = document.getElementById("openBtn");
+
+            // Sekarang Anda dapat menggunakan nilai sidebarRight untuk memeriksa posisi sidebar
+
+
+            if (sidebar.style.right === "-200px") { // Sidebar tertutup
+                sidebar.style.right = "0";
+                content.style.marginRight = "200px"; // Geser konten saat sidebar terbuka
+                openBtn.style.opacity = "0"; // Sembunyikan tombol saat sidebar terbuka
+            } else { // Sidebar terbuka
+                sidebar.style.right = "-200px";
+                content.style.marginRight = "0"; // Geser konten kembali ke posisi semula
+                openBtn.style.opacity = "1"; // Tampilkan kembali tombol saat sidebar tertutup
+            }
+        }
+
+        // Fungsi untuk menutup sidebar saat mengklik di area konten
+        function closeSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            var content = document.getElementById("mainContent");
+            var openBtn = document.getElementById("openBtn");
+
+            // Sekarang Anda dapat menggunakan nilai sidebarRight untuk memeriksa posisi sidebar
+
+
+            if (sidebar.style.right === "0") { // Sidebar terbuka
+                sidebar.style.right = "-200px";
+                content.style.marginRight = "0"; // Geser konten kembali ke posisi semula
+                openBtn.style.opacity = "1"; // Tampilkan kembali tombol saat sidebar tertutup
+            }
+        }
+    </script>
+</body>
+
+
+</html>

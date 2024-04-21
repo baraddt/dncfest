@@ -1,0 +1,271 @@
+/* UNTUK DASHBOARD.HTML */
+/* Style untuk sidebar */
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    /* Awalnya di luar layar */
+    background-color: #111;
+    padding-top: 20px;
+    color: white;
+    transition: right 0.3s ease;
+    /* Animasi pergerakan sidebar */
+}
+
+.sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #333;
+}
+
+/* Style untuk tombol */
+.open-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    /* Mengubah posisi tombol ke kanan */
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+    /* Pastikan tombol ini muncul di atas konten */
+    transition: opacity 0.3s;
+    /* Animasi perubahan opacity */
+}
+
+/* Style untuk konten */
+.content {
+    margin-right: 0;
+    /* Margin diatur menjadi 0 saat sidebar tertutup */
+    padding: 20px;
+    transition: margin-right 0.3s;
+    /* Animasi pergerakan konten saat sidebar berubah posisi */
+    text-align: center;
+    margin-bottom: 80px;
+    
+    /* Tinggi footer */
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1E0342;
+    /* background-image: url('img/background-db.jpeg'); */
+    /* Ganti '/path/to/your/image.jpg' dengan URL atau path ke gambar Anda */
+    background-size: cover;
+    color: white;
+
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Menengahkan konten vertikal */
+    justify-content: center;
+    /* Menengahkan konten horizontal */
+}
+
+.event-description {
+    text-align: center;
+    /* Posisi teks di tengah */
+}
+
+.image-box {
+    width: 100%;
+    overflow: hidden;
+    /* Mengatur overflow agar gambar tidak keluar dari batas container */
+}
+
+.image-box img {
+    width: 100%;
+    /* Mengatur lebar gambar agar sesuai dengan lebar kontainer */
+    display: block;
+    /* Mengatur agar gambar menjadi blok dan mengisi lebar kontainer */
+}
+
+.news {
+    padding: 20px;
+    text-align: center;
+}
+
+.news p {
+    margin-bottom: 10px;
+}
+
+.news img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+.terms {
+    text-align: center; /* Memulai teks dari kiri */
+}
+
+.terms p {
+    text-align: left; /* Memulai teks dari kiri */
+    margin-left: 0; /* Menghapus margin kiri */
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info h4 {
+    margin: 0;
+}
+
+.contact-info p {
+    margin: 5px 0 0 0;
+}
+
+
+.btn {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+}
+
+button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+
+button:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+
+
+
+
+.box {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+    /* Memberikan tinggi maksimum pada kotak */
+    flex: 0 0 calc(33.33% - 20px);
+    /* Ukuran lebar masing-masing kotak (dikurangi dengan padding) */
+    max-width: calc(33.33% - 20px);
+    /* Maksimum lebar masing-masing kotak (dikurangi dengan padding) */
+    margin: 0 20px 20px 0;
+    /* Jarak antar kotak, disesuaikan agar tiga kotak berjajar dengan baik */
+    box-sizing: border-box;
+    /* Mengatur agar padding tidak mempengaruhi lebar kotak */
+}
+
+/* Style untuk gambar */
+.box img {
+    max-width: 100%;
+    /* Mengatur lebar maksimum gambar sesuai dengan lebar kotak */
+    height: auto;
+    /* Mengatur tinggi gambar agar tetap proporsional */
+}
+
+.box p {
+    margin-bottom: 10px;
+    color: #1E0342;
+    /* Mengatur warna teks deskripsi menjadi hitam */
+}
+
+
+/* Pengaturan untuk kotak keempat dan seterusnya */
+.box:nth-child(n+4) {
+    margin-right: 0;
+    /* Menghilangkan margin kanan untuk kotak keempat dan seterusnya agar tidak tumpang tindih */
+}
+
+/* Atur agar kotak hanya berjajar ke kanan pada layar yang cukup lebar */
+@media screen and (max-width: 767px) {
+    .box {
+        flex: 0 0 100%;
+        /* Setiap kotak akan mengambil satu baris penuh pada layar yang lebih kecil */
+        max-width: 100%;
+        /* Batasi lebar maksimum untuk memastikan kotak tidak terlalu besar */
+        margin-right: 0;
+        /* Hilangkan margin kanan untuk semua kotak pada layar yang lebih kecil */
+    }
+
+    footer {
+        display: block;
+        /* Tampilkan footer saat tampilan mencapai paling bawah */
+    }
+}
+
+.box button {
+    background-color: #0E46A3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.box button:hover {
+    background-color: #555;
+}
+
+
+
+
+
+/* UNTUK ABOUT.PHP */
